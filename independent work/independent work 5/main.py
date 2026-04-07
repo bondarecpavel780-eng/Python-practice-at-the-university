@@ -1,12 +1,17 @@
-from io_utils import get_valid_input, print_result
-from math_core import taylor_sin
-from performance import plot_performance
+import io_mod
+import calc_mod
+import perf_mod
 
-def main():
-    x, eps = get_valid_input()
-    result, iters = taylor_sin(x, eps)
-    print_result(x, result, iters)
-    plot_performance()
+# 1. Ввід даних
+x = io_mod.get_number("Введіть x: ")
+eps = io_mod.get_eps()
 
-if __name__ == "__main__":
-    main()
+# 2. Обчислення
+sin_x, iters = calc_mod.calc_sin(x, eps)
+
+# 3. Вивід
+io_mod.print_result(x, sin_x, iters)
+
+# 4. Аналіз продуктивності (графік)
+print("\nБудуємо графік продуктивності...")
+perf_mod.run_analysis()
