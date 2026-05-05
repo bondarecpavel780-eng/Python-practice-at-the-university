@@ -1,6 +1,7 @@
 from input import input_employees
 from salary import calculate_all_salaries
 from recursion import print_employees_recursive
+from test import input1
 
 employees = input_employees()
 
@@ -13,3 +14,5 @@ salaries = calculate_all_salaries(employees)
 
 for name, salary in salaries.items():
     print(f"{name}: {salary:.2f} грн")
+
+num = input1()
