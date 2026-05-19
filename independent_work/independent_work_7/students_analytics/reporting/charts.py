@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+from practice import students
+
 
 def plot_group_averages(group_averages):
     """Будує стовпчикову діаграму середнього балу по групах."""
@@ -32,3 +34,5 @@ def plot_subject_distribution(students):
     plt.ylabel('Оцінки')
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.show()
+
+
